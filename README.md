@@ -69,7 +69,7 @@ Desafio para realizar o consumo de dois endpoints de APIS usando o modulo Prefec
 
  - importar os modulos
  - definir 1ª task para uma chamada request de 1 pkmn
- - definir 2ª task para uma chamada de 1000 pkmn para ter uma lista maior e timeout para forçar um retry, conforme a prposta do desafio
+ - definir 2ª task para uma chamada das tecnicas do pkmn para ter uma lista maior e timeout para forçar um retry, conforme a proposta do desafio
  - definir o flow para usar as tasks
  - executar tudo
 
