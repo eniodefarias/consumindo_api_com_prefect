@@ -5,8 +5,9 @@ import requests
 # task para puxar só 1 pkmn
 @task
 def get_pokemon_info(pokemon_name):
+    print(f'a1 - get_pokemon_info pokemon_name={pokemon_name}')
     response = requests.get(f'https://pokeapi.co/api/v2/pokemon/{pokemon_name}')
-    print(f'a1 - lendo response={response}')
+    #print(f'a2 - lendo response={response}')
 
     return response.json()
 
@@ -27,10 +28,10 @@ def get_pokemon_abilities(pokemon_name):
 @flow(retries=3, retry_delay_seconds=5)
 def poke_flow(pokemon_name: str = 'ditto'):
     print(f'c1 - pesquisando pokemon_name={pokemon_name}')
-    pokemon_info = get_pokemon_info(pokemon_name)
+    pokemon_info = get_pokemon_info(pokemon_name)['stats']  #coloquei a chave só para não imprimir um caminhão de dados
     print(f'c2 - pokemon_info={pokemon_info}')
-    pokemon_abilities = get_pokemon_abilities(pokemon_name)
-    print(f'c3 - pokemon_abilities={pokemon_abilities}')
+    # pokemon_abilities = get_pokemon_abilities(pokemon_name)
+    # print(f'c3 - pokemon_abilities={pokemon_abilities}')
 
 
 # Let's rock
