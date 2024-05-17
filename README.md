@@ -116,7 +116,17 @@ Desafio para realizar o consumo de dois endpoints de APIS usando o modulo Prefec
  - para executar use o comando:
    - ```bash
      python3 app.py     
+       ```
+     
+
+ - para executar o teste unitario use o comando:
+   - ```bash
+     python3 app_unit_teste.py     
         ```
+     
+     
+
+
 
 ## desativando o ambiente virtual
  - após terminar, desative o venv no console
