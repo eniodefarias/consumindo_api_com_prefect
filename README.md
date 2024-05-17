@@ -49,7 +49,7 @@ Desafio para realizar o consumo de dois endpoints de APIS usando o modulo Prefec
 
  #### Como usar
   - instalar a lib
-  - definir tarefas e fluxos com os decorators
+  - definir tarefas(task) e fluxos(flow) com os decorators
   - executar o fluxo
 
 
@@ -77,7 +77,7 @@ Desafio para realizar o consumo de dois endpoints de APIS usando o modulo Prefec
 
  - sugestões e frescurinhas para o futuro, se der tempo:
    - adicionar algumas sinalizações em cada etapa
-   - add logs
+   - ~~add logs~~
    - talvez uma opção interativa 
    - talvez uma interface visual pyqt
    - UI web com flask

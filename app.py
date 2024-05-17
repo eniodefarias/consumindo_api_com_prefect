@@ -1,14 +1,14 @@
 from prefect import task, flow
 import requests
 
-
 # task para puxar só 1 pkmn
 @task
 def get_pokemon_info(pokemon_name):
     print(f'a1 - get_pokemon_info pokemon_name={pokemon_name}')
     response = requests.get(f'https://pokeapi.co/api/v2/pokemon/{pokemon_name}')
     #print(f'a2 - lendo response={response}')
-
+    if response.status_code != 200:
+        raise Exception('Falha na requisição da API')
     return response.json()
 
 
@@ -27,6 +27,7 @@ def get_pokemon_abilities(pokemon_name):
 # fluxo para puxar as tasks
 @flow(retries=3, retry_delay_seconds=5)
 def poke_flow(pokemon_name: str = 'ditto'):
+
     print(f'c1 - pesquisando pokemon_name={pokemon_name}')
     pokemon_info = get_pokemon_info(pokemon_name)['stats']  #coloquei a chave só para não imprimir um caminhão de dados
     print(f'c2 - pokemon_info={pokemon_info}')
@@ -38,3 +39,4 @@ def poke_flow(pokemon_name: str = 'ditto'):
 if __name__ == '__main__':
     print(f'Executando app:')
     poke_flow(pokemon_name='jolteon')
+    poke_flow()
