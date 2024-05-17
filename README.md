@@ -82,3 +82,39 @@ Desafio para realizar o consumo de dois endpoints de APIS usando o modulo Prefec
    - talvez uma interface visual pyqt
    - UI web com flask
 
+# como executar o projeto
+ -
+ - para os processos abaixo, considere o uso em um ambiente linux
+
+## preparação do ambiente
+
+ - realize o download do projeto:
+   - ```bash
+      git clone https://github.com/eniodefarias/consumindo_api_com_prefect.git 
+     ```
+ - entre no diretorio do projeto:
+   - ```bash 
+     cd  consumindo_api_com_prefect
+     ```
+ - crie um ambiente virtual com o venv:
+   - ```bash
+     python3 -m venv ./venv
+     ```
+
+ - ative o venv o terminal:
+   - ```bash
+       source ./venv/bin/activate
+       ```
+   
+ - instale as bibliotecas do requirements.txt
+   - ```bash
+     cat requirements.txt|sort|uniq | xargs -n 1 pip install 
+     ```
+ 
+ 
+## executando
+ - para executar use o comando:
+   - ```bash
+     python app.py     
+        ```
+   
