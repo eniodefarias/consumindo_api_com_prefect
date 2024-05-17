@@ -39,6 +39,7 @@ def poke_flow(pokemon_name: str = 'ditto', timeout: float = 10):
     print(f'c1 - pesquisando pokemon_name={pokemon_name}\n\n')
     pokemon_info = get_pokemon_info(pokemon_name)['stats']  #coloquei a chave só para não imprimir um caminhão de dados
     print(f'c2 - {pokemon_name} >>  pokemon_info={pokemon_info}\n\n')
+    time.sleep(5)
     pokemon_encounters = get_pokemon_encounters(pokemon_name, timeout)
     print(f'c3 - {pokemon_name} >> pokemon_encounters={pokemon_encounters}\n\n')
 
