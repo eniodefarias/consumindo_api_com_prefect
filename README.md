@@ -117,4 +117,9 @@ Desafio para realizar o consumo de dois endpoints de APIS usando o modulo Prefec
    - ```bash
      python3 app.py     
         ```
-   
+
+## desativando o ambiente virtual
+ - após terminar, desative o venv no console
+   - ```bash
+        deactivate
+     ```
