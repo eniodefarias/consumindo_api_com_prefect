@@ -115,6 +115,6 @@ Desafio para realizar o consumo de dois endpoints de APIS usando o modulo Prefec
 ## executando
  - para executar use o comando:
    - ```bash
-     python app.py     
+     python3 app.py     
         ```
    
